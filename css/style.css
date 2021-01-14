@@ -1,4 +1,25 @@
+/* RESET*/
 
+*{
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+ul{
+  list-style-type: none;
+}
+
+/* UTILITY CLASS*/
 .flex{
   display: flex
 }
@@ -6,37 +27,106 @@
 .relative{
   position: relative;
 }
+
+
+/* NAVBAR container*/
 .nav-container{
   margin: 0 auto;
   width: 1200px;
   justify-content: space-between;
-}
+  color: #8C8D8E;
+  font-size: 16px;
+  height: 80px;
+  /*   border-bottom: 1px solid black;  */
 
-ul{
-  list-style-type: none;
 }
 
 .left-menu > ul > li, .right-menu > ul > li {
-  padding-left: 15px;
+  padding-left: 30px;
 }
-
-
 
 .left-menu > ul, .right-menu > ul {
   display: flex;
-  flex-direction: row;
+  align-items: center;
+
+}
+
+/* LOGO*/
+.logo{
+  width: 30px;
+  vertical-align: middle;
+}
+
+
+.left-menu > ul:first-child > li:first-child{
+  padding-left: 0px;
+  margin-right: 50px;
+}
+/* end logo*/
+
+
+.left-menu > ul:first-child > li:nth-child(2){
+  color: black;
+}
+
+
+.dropdown ul{
+  width:170px;;
+  padding-right:10px;
+}
+
+.dropdown ul li {
+  padding-bottom: 20px;
+}
+
+.features ul li:first-child{
+  padding-bottom: 30px;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #C7CFD5;
+}
+
+.dropdown ul li img{
+  width: 20px;
+  vertical-align: middle;
+  margin-right: 10px;
+  background-color:#C7CFD5;
+  border-radius: 50%;
+  padding: 5px 5px;
 }
 
 .dropdown{
+  padding: 30px 0px 30px 30px;
+  background-color: white;
   position: absolute;
   display: none;
-  box-shadow: 0px 0px 5px  #000;
+  box-shadow: 0px 0px 5px  #C7CFD5;
   border-radius: 5px;
-  top: 30px;
+  top: 40px;
   transform: translate(-30%);
-  padding-right: 30px;
+  color: #8C8D8E;
+  font-weight:300;
+}
+
+.link-active{
+  color: black;
 }
 
 .dropdown.active{
   display: flex;
+  justify-content: space-around;
+}
+
+.right-menu ul li:nth-child(5) span{
+  color: black;
+  background-color:#EEEEEE;
+  padding: 10px;
+  border-radius: 10px;;
+}
+
+.right-menu ul li:nth-child(6) span{
+  color: white;
+  background-color:#000;
+  padding: 10px;
+  border-radius: 10px;;
 }
